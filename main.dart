@@ -19,13 +19,13 @@ void main() {
 class _novaPaginaDados extends StatefulWidget {
   const _novaPaginaDados({Key? key}) : super(key: key);
 
-  @override
-  State<_novaPaginaDados> createState() => new __novaPaginaDadosState();
+    @override
+    State<_novaPaginaDados> createState() => new _novaPaginaDadosState();
 }
 
-class __novaPaginaDadosState extends State<_novaPaginaDados> {
-  int valorTirado1 = 6;
-  int valorTirado2 = 5;
+class _novaPaginaDadosState extends State<_novaPaginaDados> {
+  int valorTirado1 = 2;
+  int valorTirado2 = 3;
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -36,7 +36,8 @@ class __novaPaginaDadosState extends State<_novaPaginaDados> {
               onPressed: () {
                 setState(() {
                   valorTirado1 = Random().nextInt(6) + 1;
-                });
+                }
+               );
               },
               child: Image.asset('images/dado$valorTirado1.png'),
             ),
